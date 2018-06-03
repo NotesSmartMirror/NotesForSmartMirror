@@ -1,0 +1,1 @@
+<resources><style name="MyActionBar" parent="@android:style/Theme.Material.Light.DarkActionBar"><item name="android:textColorHint">#C6C6C6</item></style></resources>
