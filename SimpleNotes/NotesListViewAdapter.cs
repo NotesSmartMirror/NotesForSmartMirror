@@ -41,18 +41,14 @@ namespace SimpleNotes
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
             View row = convertView;
-
             if(row == null)
             {
                 row = LayoutInflater.From(mContext).Inflate(Resource.Layout.listview_row, null, false);
             }
-
             TextView title = row.FindViewById<TextView>(Resource.Id.title);
             title.Text = mNotes[position].Title;
-
             TextView note = row.FindViewById<TextView>(Resource.Id.note);
             note.Text = mNotes[position].Note;
-
             return row;
         }
     }

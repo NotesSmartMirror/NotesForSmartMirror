@@ -73,8 +73,7 @@ namespace SimpleNotes
                     Toast.MakeText(this, "Zapisywanie notatki na serwerze", ToastLength.Short).Show();
                     var simpleNotesService = new SimpleNotesService();
                     await simpleNotesService.PostNotesAsync(Uri, newNote);
-                }
-                    
+                }   
             }
             else
             {
@@ -93,7 +92,6 @@ namespace SimpleNotes
                     var simpleNotesService = new SimpleNotesService();
                     await simpleNotesService.PutNotesAsync(Uri, note.sqlNote_ID, putNote);
                 }
-                
             }
 
             NotesListViewAdapter adapter = new NotesListViewAdapter(this, await MainActivity.db.GetItemsAsync());
